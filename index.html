@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h1>Tasks</h1>
+          </div>
+          <div class="progress-ring" aria-label="Task completion">
+            <span id="progressValue">0%</span>
+          </div>
+        </header>
+
+        <form id="todoForm" class="composer">
+          <input id="todoInput" type="text" maxlength="80" placeholder="Add a task..." autocomplete="off" required />
+          <select id="priorityInput" aria-label="Priority">
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+            <option value="low">Low</option>
+          </select>
+          <input id="dueInput" type="date" aria-label="Due date" />
+          <button type="submit">Add</button>
+        </form>
+
+        <div class="toolbar">
+          <div class="filters" role="tablist" aria-label="Todo filters">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="active" type="button">Active</button>
+            <button class="filter" data-filter="done" type="button">Done</button>
+          </div>
+          <button id="clearDone" class="ghost" type="button">Clear done</button>
+        </div>
+
+        <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+
+        <footer class="summary">
+          <span id="taskCount">No tasks yet</span>
+          <span id="dateLabel"></span>
+        </footer>
+      </section>
+    </main>
+
+    <template id="emptyTemplate">
+      <li class="empty-state">
+        <strong>No tasks here</strong>
+        <span>Add something small and satisfying.</span>
+      </li>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
