@@ -15,5 +15,7 @@ A clean and minimal task management application designed to help you stay organi
 
 🚀 Tech Stack
 Frontend: HTML, CSS, JavaScript
+
+
 🎯 Use Case
 Perfect for students, professionals, or anyone who wants a lightweight and distraction-free way to manage their daily tasks.
